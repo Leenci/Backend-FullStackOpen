@@ -22,7 +22,7 @@ const mainPage = '<h1>This is main of my Backend</h1><h2>Routes</h2><ol><li>/inf
 
 // get main page
 app.get('/', (req, res) => {
-  res.send(mainPage)
+  res.send()
 })
 // get info page
 app.get('/info', (req, res) => {
