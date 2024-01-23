@@ -22,7 +22,7 @@ let persons = require('./persons.json')
 
 // get main page
 app.get('/', (req, res) => {
-  res.send('<h1>Hello</h1>')
+
 })
 // get info page
 app.get('/info', (req, res) => {
