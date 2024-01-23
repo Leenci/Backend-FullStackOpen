@@ -4,6 +4,7 @@ const cors = require('cors')
 
 const app = express()
 
+app.use(cors())
 const requestLogger = (request, response, next) => {
   console.log('Method:', request.method)
   console.log('Path:  ', request.path)
@@ -19,7 +20,6 @@ app.use(unknownEndpoint)
 app.use(requestLogger)
 app.use(express.json())
 app.use(morgan('tiny'))
-app.use(cors())
 
 let persons = require('./persons.json')
 const mainPage = '<h1>This is main of my Backend</h1><h2>Routes</h2><ol><li>/info</li><li>/api/persons</li><li>/api/persons/:id</li></ol>'
